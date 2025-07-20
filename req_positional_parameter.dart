@@ -23,3 +23,11 @@ marksheet(String name, int percentage) {
     print("Fail");
   }
 }
+
+// table (int number) {
+//    for (var i in number) {
+//      for (var i = 0; i < 6; i++) {
+//        print (i * )
+//      }
+//    }
+// }
