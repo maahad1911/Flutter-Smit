@@ -1,15 +1,15 @@
 void main() {
-  studentdata(name: "Mahad", percentage: 67);
-  studentdata(name: "Abdullah", percentage: 37);
-  studentdata(name: "Faisal", percentage: 89, sec: "B");
+  print(studentdata(name: "Mahad", percentage: 67));
+  print(studentdata(name: "Abdullah"));
+  print(studentdata(name: "Faisal", percentage: 43, sec: "B"));
 }
 
-studentdata({required String name, required int percentage, String sec = "A"}) {
-  if (percentage > 50) {
-    print("Name : $name , Percentage : $percentage , Sec : $sec");
-    print("Pass");
+//It is return type function//
+//In this line last string is set a by default value //
+studentdata({String? name, int? percentage , String sec = "A"}) {
+  if ((percentage ?? 0) > 50) {
+    return ("Name : $name , Percentage : $percentage , Sec : $sec : You are Pass");
   } else {
-    print("Name : $name , Percentage : $percentage , Sec : $sec");
-    print("Fail");
+    return ("Name : $name , Percentage : $percentage , Sec : $sec : You are Fail");
   }
 }

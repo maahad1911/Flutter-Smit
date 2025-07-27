@@ -1,33 +1,30 @@
 void main() {
-  String result = studentData("Mahad", 9217, "A");
-  print(result);
-
-  marksheet("Mahad", 78);
-  marksheet("Abdullah", 48);
+  //required positional parameter//
+  studentData("Mahad", 9217, "A");
+  
+  print("                ");
+  
+  //required positional parameter//
+  var abc = marksheet("Mahad", 78);
+  print(abc);
 }
 
-String studentData(String name, int rollNo, String section) {
+
+//It is a void type and cannot return a value//
+//required positional parameter//
+void studentData(String name, int rollNo, String section) {
   print("Name : $name");
   print("Rollno : $rollNo");
   print("Section : $section");
-
-  return "Student data recorded.";
 }
 
-marksheet(String name, int percentage) {
+
+//It is a return type function//
+//required positional parameter//
+String marksheet(String name, int percentage) {
   if (percentage > 50) {
-    print(name);
-    print("Pass");
+    return ("Congratulation $name you are pass");
   } else {
-    print(name);
-    print("Fail");
+    return ("Unfortunately $name you are fail");
   }
 }
-
-// table (int number) {
-//    for (var i in number) {
-//      for (var i = 0; i < 6; i++) {
-//        print (i * )
-//      }
-//    }
-// }
