@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 void main() {
   Student obj = Student();
   //here is ging values to constructor//
@@ -6,7 +8,7 @@ void main() {
 
   Student obj1 = Student();
   obj.studentInfo("Abdullah", 20);
-  obj.infoStatus();
+  var infoStatus = obj.infoStatus();
 }
 
 class Student {
