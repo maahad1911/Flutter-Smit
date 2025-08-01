@@ -1,14 +1,12 @@
 // ignore_for_file: unused_local_variable
 
 void main() {
-  Student obj = Student();
   //here is ging values to constructor//
-  obj.studentInfo('Mahad', 19);
+  Student obj = Student("Mahad", 19);
   obj.infoStatus();
 
-  Student obj1 = Student();
-  obj.studentInfo("Abdullah", 20);
-  var infoStatus = obj.infoStatus();
+  Student obj1 = Student("Abdullah", 20);
+  obj1.infoStatus();
 }
 
 class Student {
@@ -16,10 +14,7 @@ class Student {
   int? agee;
 
   // This is constructor it will take value from parameter in main function and send it to whole class//
-  studentInfo(String name, int age) {
-    this.namee = name;
-    this.agee = age;
-  }
+  Student(this.namee, this.agee);
 
   infoStatus() {
     print("Name : $namee");
